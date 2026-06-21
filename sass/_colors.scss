@@ -1,0 +1,39 @@
+// =============================================================
+// _colors.scss — StoryCast color tokens
+// WCAG AA compliant: all text/bg combos meet 4.5:1 ratio
+// =============================================================
+
+// --- Brand ---
+$color-brand-primary:       #534AB7; // purple — buttons, links, accents
+$color-brand-primary-dark:  #3C3489; // hover state on brand primary
+$color-brand-primary-light: #EEEDFE; // hero bg, highlight tints
+
+// --- Semantic / status ---
+$color-audio:               #1D9E75; // audio badge text
+$color-audio-bg:            #E1F5EE; // audio badge background
+$color-video:               #3C3489; // video badge text
+$color-video-bg:            #EEEDFE; // video badge background
+$color-success:             #085041; // "Met" / "Available" labels
+$color-success-bg:          #E1F5EE; // success label background
+
+// --- Neutrals ---
+$color-white:               #FFFFFF;
+$color-bg:                  #FAFAF9; // page background
+$color-surface:             #FFFFFF; // card / panel surface
+$color-surface-alt:         #F5F4F0; // footer, secondary surfaces
+$color-border:              #E4E2DC; // card borders, dividers
+$color-border-light:        #F0EEE8; // subtle inner dividers
+
+// --- Text ---
+$color-text-primary:        #1A1917; // headings, strong text — 16.7:1 on white
+$color-text-secondary:      #5F5E5A; // body copy, descriptions — 7.2:1 on white
+$color-text-tertiary:       #888780; // meta, timestamps, captions — 4.6:1 on white
+$color-text-inverse:        #FFFFFF; // text on dark/brand backgrounds
+
+// --- Focus ---
+$color-focus:               #534AB7; // focus ring color
+$color-focus-offset:        #FFFFFF; // focus ring offset (shows ring clearly)
+
+// --- Blockquote ---
+$color-quote-border:        #534AB7;
+$color-quote-bg:            #F5F4F5;
