@@ -1,52 +1,83 @@
 // =============================================================
 // _typography.scss — StoryCast type tokens
+// Font: Public Sans — matches Figma exactly
 // =============================================================
 
-// --- Font stacks ---
-$font-sans:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace; // transcript timestamps
+$font-primary: 'Public Sans', system-ui, -apple-system, sans-serif;
+$font-mono:    'Courier New', monospace; // transcript timestamps
 
-// --- Type scale (rem — base 16px) ---
-$text-xs:      0.6875rem;  // 11px — chips, meta labels
-$text-sm:      0.75rem;    // 12px — captions, footer links
-$text-base:    0.875rem;   // 14px — body, card descriptions
-$text-md:      1rem;       // 16px — nav links, section intros
-$text-lg:      1.125rem;   // 18px — card titles, sub-headings
-$text-xl:      1.375rem;   // 22px — h3 level
-$text-2xl:     1.75rem;    // 28px — h2 section headings
-$text-3xl:     2.25rem;    // 36px — h1 on inner pages
-$text-4xl:     3rem;       // 48px — h1 on home hero
+// Type scale — matched to Figma fontSize tokens
+$text-label-sm:   12px;   // uppercase labels, tiny badges
+$text-label-md:   14px;   // nav links, button text, meta
+$text-body-md:    16px;   // body copy, card descriptions
+$text-body-lg:    18px;   // intro paragraphs, feature text
+$text-headline-sm: 24px;  // card titles, section sub-headings
+$text-headline-md: 30px;  // section headings
+$text-display-lg-mobile: 32px; // h1 on mobile
+$text-display-lg:  48px;  // h1 hero desktop
 
-// --- Font weights ---
+// Weights
 $weight-regular:   400;
-$weight-medium:    500;
 $weight-semibold:  600;
 $weight-bold:      700;
+$weight-extrabold: 800;
 
-// --- Line heights ---
-$leading-tight:    1.2;   // headings
-$leading-snug:     1.4;   // subheadings
-$leading-normal:   1.6;   // body text
-$leading-relaxed:  1.75;  // transcript, long-form reading
+// Line heights
+$leading-tight:   1.1;
+$leading-snug:    1.2;
+$leading-normal:  1.5;
+$leading-relaxed: 1.6;
 
-// --- Letter spacing ---
-$tracking-tight:   -0.02em; // large display headings
-$tracking-normal:  0em;
-$tracking-wide:    0.05em;  // eyebrows, labels, all-caps
-$tracking-wider:   0.08em;  // small badge text
+// Letter spacing
+$tracking-tight:  -0.02em;
+$tracking-wide:   0.05em;
 
-// --- Heading mixin ---
-@mixin heading-style($size, $weight: $weight-bold, $leading: $leading-tight) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $leading;
+// Mixins
+@mixin display-lg {
+  font-size: $text-display-lg;
+  font-weight: $weight-extrabold;
+  line-height: $leading-tight;
   letter-spacing: $tracking-tight;
 }
 
-// --- Eyebrow label mixin ---
-@mixin eyebrow {
-  font-size: $text-xs;
+@mixin display-lg-mobile {
+  font-size: $text-display-lg-mobile;
+  font-weight: $weight-extrabold;
+  line-height: $leading-snug;
+}
+
+@mixin headline-md {
+  font-size: $text-headline-md;
+  font-weight: $weight-bold;
+  line-height: $leading-snug;
+}
+
+@mixin headline-sm {
+  font-size: $text-headline-sm;
+  font-weight: $weight-bold;
+  line-height: 1.3;
+}
+
+@mixin label-md {
+  font-size: $text-label-md;
   font-weight: $weight-semibold;
+  letter-spacing: 0.01em;
+}
+
+@mixin label-sm {
+  font-size: $text-label-sm;
+  font-weight: $weight-bold;
   letter-spacing: $tracking-wide;
-  text-transform: uppercase;
+}
+
+@mixin body-md {
+  font-size: $text-body-md;
+  font-weight: $weight-regular;
+  line-height: $leading-normal;
+}
+
+@mixin body-lg {
+  font-size: $text-body-lg;
+  font-weight: $weight-regular;
+  line-height: $leading-relaxed;
 }

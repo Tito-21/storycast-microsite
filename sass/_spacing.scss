@@ -1,46 +1,46 @@
 // =============================================================
-// _spacing.scss — StoryCast spacing & layout tokens
+// _spacing.scss — StoryCast spacing tokens
+// Matched to Figma spacing system
 // =============================================================
 
-// --- Spacing scale (rem) ---
-$space-1:   0.25rem;   //  4px
-$space-2:   0.5rem;    //  8px
-$space-3:   0.75rem;   // 12px
-$space-4:   1rem;      // 16px
-$space-5:   1.25rem;   // 20px
-$space-6:   1.5rem;    // 24px
-$space-8:   2rem;      // 32px
-$space-10:  2.5rem;    // 40px
-$space-12:  3rem;      // 48px
-$space-16:  4rem;      // 64px
-$space-20:  5rem;      // 80px
-$space-24:  6rem;      // 96px
+// Spacing scale
+$space-xs:   4px;
+$space-sm:   8px;
+$space-md:   16px;
+$space-lg:   24px;
+$space-xl:   32px;
+$space-xxl:  48px;
+$space-margin-mobile:  16px;
+$space-margin-desktop: 40px;
 
-// --- Border radius ---
-$radius-sm:   0.25rem;   //  4px — chips, small badges
-$radius-md:   0.5rem;    //  8px — buttons
-$radius-lg:   0.875rem;  // 14px — cards
-$radius-xl:   1.25rem;   // 20px — large feature cards
-$radius-full: 9999px;    // pill shapes
+// Border radius
+$radius-sm:   4px;
+$radius-lg:   8px;
+$radius-xl:   12px;
+$radius-full: 9999px;
 
-// --- Border width ---
-$border-thin:   0.5px;
-$border-normal: 1px;
-$border-thick:  3px;   // blockquote left border
+// Border
+$border-thin: 1px solid;
 
-// --- Container ---
-$container-max:    1200px;
-$container-narrow: 720px;
-$container-pad:    $space-6;    // 24px side padding
-$container-pad-sm: $space-4;   // 16px on mobile
+// Shadows
+$shadow-sm: 0 1px 3px rgba(20,27,43,0.06), 0 1px 2px rgba(20,27,43,0.04);
+$shadow-md: 0 4px 12px rgba(20,27,43,0.08), 0 2px 4px rgba(20,27,43,0.04);
+$shadow-lg: 0 8px 24px rgba(20,27,43,0.10), 0 4px 8px rgba(20,27,43,0.06);
 
-// --- Breakpoints ---
-$bp-sm:   480px;
-$bp-md:   768px;
-$bp-lg:   1024px;
-$bp-xl:   1280px;
+// Container
+$container-max: 1200px;
 
-// --- Responsive mixin ---
+// Breakpoints
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+
+// Transitions
+$transition-fast:   0.2s ease;
+$transition-normal: 0.3s ease;
+
+// Responsive mixin
 @mixin respond($bp) {
   @if $bp == sm  { @media (max-width: #{$bp-sm})  { @content; } }
   @if $bp == md  { @media (max-width: #{$bp-md})  { @content; } }
@@ -48,19 +48,6 @@ $bp-xl:   1280px;
   @if $bp == xl  { @media (max-width: #{$bp-xl})  { @content; } }
 }
 
-// --- Shadow ---
-$shadow-sm:  0 1px 3px rgba(26,25,23,0.06), 0 1px 2px rgba(26,25,23,0.04);
-$shadow-md:  0 4px 12px rgba(26,25,23,0.08), 0 2px 4px rgba(26,25,23,0.04);
-$shadow-lg:  0 12px 32px rgba(26,25,23,0.10), 0 4px 8px rgba(26,25,23,0.06);
-
-// --- Z-index ---
-$z-base:    1;
-$z-above:   10;
-$z-nav:     100;
-$z-modal:   1000;
-$z-skip:    9999;
-
-// --- Transition ---
-$transition-fast:   150ms ease;
-$transition-normal: 250ms ease;
-$transition-slow:   400ms ease;
+// Z-index
+$z-nav:   50;
+$z-skip:  9999;

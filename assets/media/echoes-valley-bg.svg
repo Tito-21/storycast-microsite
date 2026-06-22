@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Valley video background</title>
+  <desc id="desc">A cinematic green valley with sunlight crossing the ridges.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f7d78d"/><stop offset=".45" stop-color="#8fb89b"/><stop offset="1" stop-color="#0f2416"/></linearGradient>
+    <radialGradient id="sun" cx="48%" cy="28%" r="40%"><stop offset="0" stop-color="#fff8c9"/><stop offset=".35" stop-color="#f6d77a" stop-opacity=".65"/><stop offset="1" stop-color="#f6d77a" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <rect width="1280" height="720" fill="url(#sun)"/>
+  <path d="M0 470 250 140l210 340 190-248 210 284 250-362 170 252v314H0z" fill="#18371f"/>
+  <path d="M0 540 270 338l206 228 182-174 254 216 176-180 192 162v130H0z" fill="#102817"/>
+  <path d="M0 404c198 40 388 22 570-54 180-74 396-68 710 18" fill="none" stroke="#f8fafc" stroke-width="46" opacity=".2"/>
+  <path d="M626 276c50 90 20 136-58 178-60 32-50 82 50 126 82 36 68 92-44 138" fill="none" stroke="#fef9c3" stroke-width="16" stroke-linecap="round" opacity=".8"/>
+</svg>

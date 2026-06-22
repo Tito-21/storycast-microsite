@@ -3,41 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The last radio station in the valley — A community oral history of WKLV-FM. Full audio, transcript, and captions available on StoryCast." />
-  <title>The last radio station in the valley — StoryCast</title>
+  <meta name="description" content="Echoes of the Valley — A documentary exploring the acoustic communities of the High Ridge range. Full video, captions, and transcript available." />
+  <title>Echoes of the Valley — StoryCast</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- ============================================================
-       HEADER / NAVIGATION
-  ============================================================ -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
 
-        <a href="../index.html" class="nav__logo" aria-label="StoryCast — go to homepage">
-          <span class="nav__logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1zm0 19a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-            </svg>
-          </span>
-          StoryCast
-        </a>
-
-        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
+        <a href="../index.html" class="nav__logo" aria-label="StoryCast home">StoryCast</a>
 
         <ul class="nav__links" id="nav-links" role="list">
           <li><a href="../index.html" class="nav__link">Home</a></li>
@@ -46,338 +29,349 @@
         </ul>
 
         <div class="nav__actions">
-          <a href="../about.html#engage" class="btn btn--primary btn--sm">Submit a story</a>
+          <button class="nav__icon-btn" aria-label="Accessibility settings">
+            <span class="material-symbols-outlined" aria-hidden="true">accessibility_new</span>
+          </button>
+          <button class="nav__icon-btn" aria-label="Search stories">
+            <span class="material-symbols-outlined" aria-hidden="true">search</span>
+          </button>
+          <button class="nav__mobile-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+          </button>
         </div>
 
       </nav>
     </div>
+    <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="../index.html" class="nav__link">Home</a>
+      <a href="../index.html#story-grid" class="nav__link" aria-current="page">Stories</a>
+      <a href="../about.html" class="nav__link">About</a>
+    </div>
   </header>
 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
-  <main id="main-content" tabindex="-1">
+  <!-- MAIN -->
+  <main id="main-content" class="mt-16" tabindex="-1">
 
-    <!-- STORY HERO HEADER -->
+    <!-- STORY HEADER -->
     <div class="story-header">
-      <div class="container">
-
-        <!-- Breadcrumb -->
-        <nav aria-label="Breadcrumb" class="breadcrumb">
-          <ol class="breadcrumb__list" role="list">
-            <li class="breadcrumb__item">
-              <a href="../index.html" class="breadcrumb__link">Home</a>
-              <span class="breadcrumb__sep" aria-hidden="true">›</span>
-            </li>
-            <li class="breadcrumb__item">
-              <a href="../index.html#story-grid" class="breadcrumb__link">Stories</a>
-              <span class="breadcrumb__sep" aria-hidden="true">›</span>
-            </li>
-            <li class="breadcrumb__item" aria-current="page">
-              The last radio station in the valley
-            </li>
-          </ol>
-        </nav>
-
-        <div class="story-header__badges">
-          <span class="badge badge--audio">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm5.3 9H19a7 7 0 0 1-14 0h1.7A5.3 5.3 0 0 0 12 15.3 5.3 5.3 0 0 0 17.3 10z"/></svg>
-            Audio
-          </span>
-          <span class="badge badge--category">Documentary</span>
-          <span class="badge badge--category">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            24 min
-          </span>
-        </div>
-
-        <h1 class="story-header__title">The last radio station in the valley</h1>
-        <p class="story-header__byline">
-          By <strong>Amara Osei</strong> &nbsp;·&nbsp; Published June 2024 &nbsp;·&nbsp; Community oral history
-        </p>
-
+      <h1 class="story-header__heading">Echoes of the Valley</h1>
+      <div class="story-header__meta" aria-label="Story metadata">
+        <span class="story-header__meta-item">
+          <span class="material-symbols-outlined" aria-hidden="true">calendar_today</span>
+          <time datetime="2024-10-12">Published Oct 12, 2024</time>
+        </span>
+        <span class="story-header__meta-dot" aria-hidden="true"></span>
+        <span class="story-header__meta-item">
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+          <span>12:45</span>
+        </span>
+        <span class="story-header__meta-dot" aria-hidden="true"></span>
+        <span class="badge badge--green">Captions</span>
+        <span class="badge badge--green">Transcript</span>
       </div>
     </div>
 
-    <!-- TWO-COLUMN STORY LAYOUT -->
-    <div class="container">
-      <div class="story-layout">
+    <!-- STORY LAYOUT — video + transcript sidebar -->
+    <div class="story-layout">
 
-        <!-- MAIN COLUMN -->
-        <article aria-labelledby="story-title-ref">
-          <h2 id="story-title-ref" class="visually-hidden">Story content</h2>
+      <!-- MAIN COLUMN -->
+      <article aria-labelledby="story-content-heading">
+        <h2 id="story-content-heading" class="visually-hidden">Story content</h2>
 
-          <!-- MEDIA PLAYER -->
-          <section class="player" aria-labelledby="player-heading">
-            <h2 class="player__heading" id="player-heading">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              Listen to this story
-            </h2>
+        <!-- VIDEO PLAYER -->
+        <section aria-labelledby="video-heading">
+          <h2 id="video-heading" class="visually-hidden">Video player</h2>
 
-            <figure>
-              <audio
-                class="player__media"
-                controls
-                aria-label="Audio: The last radio station in the valley, 24 minutes"
-                aria-describedby="audio-desc"
-              >
-                <!--
-                  In production, replace src with actual audio file path.
-                  Example: <source src="../assets/media/story-1.mp3" type="audio/mpeg" />
-                  Multiple formats for browser compatibility:
-                -->
-                <source src="../assets/media/story-1.mp3" type="audio/mpeg" />
-                <source src="../assets/media/story-1.ogg" type="audio/ogg" />
-                <p>
-                  Your browser does not support the audio element.
-                  <a href="../assets/transcripts/story-1-transcript.txt">Read the full transcript instead</a>.
-                </p>
-              </audio>
-              <figcaption class="player__figcaption" id="audio-desc">
-                Audio documentary — 24 minutes. Full transcript available below.
-                <a href="../assets/transcripts/story-1-transcript.txt" download>Download transcript (.txt)</a>.
-              </figcaption>
-            </figure>
-
-            <div class="player__a11y">
-              <span class="badge badge--category">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Full transcript below
-              </span>
-              <a href="../assets/transcripts/story-1-transcript.txt" download class="badge badge--category" aria-label="Download MP3 audio file">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download transcript
-              </a>
-            </div>
-          </section>
-
-          <!-- STORY BODY -->
-          <section class="story-body" aria-labelledby="about-heading">
-            <h2 class="story-body__heading" id="about-heading">About this story</h2>
-
-            <p>
-              WKLV was more than a radio station. For the 4,000 residents of Millfield Valley,
-              it was the thread that held community together — morning calls, weather warnings,
-              and voices that knew every name on every road.
-            </p>
-
-            <blockquote cite="Patrice Briggs, interview October 2023">
-              <p>
-                "When the floods came, the only voice telling us to get out was WKLV.
-                That's not something a streaming platform can do."
-              </p>
-            </blockquote>
-
-            <p>
-              This oral history was recorded over three days in October 2023 with former
-              station staff, longtime listeners, and the family of station founder Roy Briggs.
-              The station broadcast for fifty-three years before going silent in March 2022.
-            </p>
-
-            <p>
-              Producer Amara Osei spoke with eleven community members across two counties.
-              All interviews were conducted with informed consent and participants have reviewed
-              their quoted material.
-            </p>
-          </section>
-
-          <!-- TRANSCRIPT -->
-          <section class="transcript" aria-labelledby="transcript-heading" id="transcripts">
-            <div class="transcript__header">
-              <h2 class="transcript__heading" id="transcript-heading">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:6px;color:#534AB7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                Full transcript
-              </h2>
-              <a
-                href="../assets/transcripts/story-1-transcript.txt"
-                download
-                class="btn btn--outline btn--sm"
-                aria-label="Download full transcript as text file"
-              >
-                Download .txt
-              </a>
-            </div>
-
+          <figure>
             <div
-              class="transcript__body"
-              tabindex="0"
+              class="video-player"
               role="region"
-              aria-label="Story transcript — scroll to read full text"
+              aria-label="Video player for Echoes of the Valley"
             >
-              <div class="transcript__entry">
-                <span class="transcript__time">[00:00]</span>
-                <p class="transcript__text"><strong>AMARA OSEI:</strong> The first thing everyone tells you about KVAL is the static. Not the bad kind — the living kind, the kind that meant the signal was fighting through mountain air to reach you.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[00:14]</span>
-                <p class="transcript__text"><strong>DELLA RUIZ:</strong> My husband and I, we'd have it on every single morning. Six-thirty news, weather for the passes, farm report. We couldn't start the day without it.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[00:28]</span>
-                <p class="transcript__text"><strong>AMARA OSEI:</strong> The station sat at four thousand feet elevation, in a prefabricated building that had originally been a ranger outpost. The transmitter was upgraded once, in 1981.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[00:42]</span>
-                <p class="transcript__text"><strong>GLEN TAKAHASHI</strong> (former program director): We ran on a skeleton crew the whole time. Three full-time people in the good years. Toward the end it was two — myself and Roy's daughter Patrice.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[01:02]</span>
-                <p class="transcript__text"><strong>AMARA OSEI:</strong> Roy Briggs built the station with his own hands in 1971. His daughter, Patrice, remembers watching him string the antenna cable across the roof of their family home.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[01:18]</span>
-                <p class="transcript__text"><strong>PATRICE BRIGGS:</strong> He said the valley needed a voice. Not a big voice. Just a voice that knew it was home. He used to say that the mountains already had their own sound — he just wanted to give people a way to hear each other over them.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[02:00]</span>
-                <p class="transcript__text"><strong>DELLA RUIZ:</strong> When the floods came in 2019 — that was when everything changed. The county emergency system went down. Cell towers were out. The only voice telling us to get out, telling us which roads were passable, was WKLV.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[02:18]</span>
-                <p class="transcript__text"><strong>GLEN TAKAHASHI:</strong> We stayed on air for thirty-one hours straight. Patrice and I took turns sleeping on the floor. We had a generator, a phone line, and Roy's old address book of everyone in the valley who had a landline.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[02:35]</span>
-                <p class="transcript__text"><strong>PATRICE BRIGGS:</strong> People called in from their porches as the water rose. We read out their names on air so their families would know they were okay. That's not something a streaming platform can do.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[03:00]</span>
-                <p class="transcript__text"><strong>AMARA OSEI:</strong> The station closed fourteen months after the floods. Equipment failure, a collapse in local advertising, and the death of Roy Briggs in early 2021 proved too much to recover from. The transmitter went silent on a Tuesday morning in March 2022.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[03:20]</span>
-                <p class="transcript__text"><strong>DELLA RUIZ:</strong> I turned on the radio like I always did and there was nothing. Just static. And I thought — well, I thought, there it is. The bad kind.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[03:58]</span>
-                <p class="transcript__text"><strong>AMARA OSEI:</strong> The building still stands. Patrice Briggs visits it every year on her father's birthday. She says it still smells like coffee and solder and something she can only describe as frequency.</p>
-              </div>
-              <div class="transcript__entry">
-                <span class="transcript__time">[04:14]</span>
-                <p class="transcript__text"><strong>PATRICE BRIGGS:</strong> I want people to know it mattered. Not just during the flood — always. Every single morning that someone heard the weather and knew what to wear. Every night someone fell asleep to a voice that knew their town. That mattered. That was real.</p>
+              <div
+                class="video-player__thumb"
+                style="background-image: url('../assets/media/echoes-valley-bg.svg')"
+                role="img"
+                aria-label="Valley landscape at sunrise — video thumbnail"
+              ></div>
+
+              <!--
+                VIDEO ELEMENT — add your real video file here.
+                Place the file at: assets/js/media/echoes-of-the-valley.mp4
+                Place captions at: assets/js/media/echoes-of-the-valley.vtt
+              -->
+              <video
+                style="display:none"
+                controls
+                aria-label="Echoes of the Valley — 12 minute documentary"
+                aria-describedby="video-desc"
+              >
+                <source src="../assets/js/media/echoes-of-the-valley.mp4" type="video/mp4" />
+                <track
+                  kind="captions"
+                  src="../assets/js/media/echoes-of-the-valley.vtt"
+                  srclang="en"
+                  label="English captions"
+                  default
+                />
+                <p>
+                  Your browser does not support video.
+                  <a href="../assets/js/media/echoes-of-the-valley-transcript.txt">Read the full transcript</a>.
+                </p>
+              </video>
+
+              <div class="video-player__overlay" aria-hidden="true">
+                <div class="video-player__controls">
+                  <div class="video-player__controls-left">
+                    <button class="video-player__play-btn" aria-label="Play video" id="play-btn">
+                      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:36px">play_arrow</span>
+                    </button>
+                    <div class="video-player__progress" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" aria-label="Video progress">
+                      <div class="video-player__progress-fill"></div>
+                    </div>
+                    <span class="video-player__time">04:12 / 12:45</span>
+                  </div>
+                  <div class="video-player__controls-right">
+                    <button class="video-player__ctrl-btn" aria-label="Toggle captions">
+                      <span class="material-symbols-outlined">closed_caption</span>
+                    </button>
+                    <button class="video-player__ctrl-btn" aria-label="Settings">
+                      <span class="material-symbols-outlined">settings</span>
+                    </button>
+                    <button class="video-player__ctrl-btn" aria-label="Fullscreen">
+                      <span class="material-symbols-outlined">fullscreen</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
+            <figcaption id="video-desc" class="visually-hidden">
+              Echoes of the Valley — a 12 minute and 45 second documentary. Full captions
+              available in English. Transcript available below and as a downloadable text file.
+            </figcaption>
+          </figure>
+        </section>
 
-        </article>
+        <!-- STORY DESCRIPTION -->
+        <section class="story-description" aria-labelledby="desc-heading">
+          <h2 class="story-description__heading" id="desc-heading">Description</h2>
+          <p class="story-description__body">
+            Echoes of the Valley explores the intricate relationship between the seasonal winds
+            and the acoustic phenomena found in the High Ridge range. This documentary piece
+            follows local residents who have documented these sounds for generations, capturing
+            oral histories that are at risk of being lost to time.
+          </p>
+        </section>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar" aria-label="Story information and related content">
+      </article>
 
-          <!-- Meta table -->
-          <div class="meta-table">
-            <h2 class="meta-table__heading">Story details</h2>
-            <dl>
-              <div class="meta-table__row">
-                <dt class="meta-key">Format</dt>
-                <dd class="meta-val">Audio</dd>
-              </div>
-              <div class="meta-table__row">
-                <dt class="meta-key">Duration</dt>
-                <dd class="meta-val">24 min</dd>
-              </div>
-              <div class="meta-table__row">
-                <dt class="meta-key">Category</dt>
-                <dd class="meta-val">Documentary</dd>
-              </div>
-              <div class="meta-table__row">
-                <dt class="meta-key">Year</dt>
-                <dd class="meta-val">2024</dd>
-              </div>
-              <div class="meta-table__row">
-                <dt class="meta-key">Transcript</dt>
-                <dd class="meta-val meta-val--success">Available</dd>
-              </div>
-              <div class="meta-table__row">
-                <dt class="meta-key">Captions</dt>
-                <dd class="meta-val meta-val--success">Available</dd>
-              </div>
-            </dl>
+      <!-- TRANSCRIPT SIDEBAR -->
+      <aside aria-labelledby="transcript-heading">
+        <div class="transcript-panel" id="transcript-panel">
+          <div class="transcript-panel__header">
+            <h2 class="transcript-panel__heading" id="transcript-heading">Full Transcript</h2>
+            <a
+              href="../assets/js/media/echoes-of-the-valley-transcript.txt"
+              download
+              class="transcript-panel__download"
+              aria-label="Download full transcript as text file"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">download</span>
+              PDF
+            </a>
           </div>
 
-          <!-- Related stories -->
-          <nav class="related" aria-labelledby="related-heading">
-            <h2 class="related__heading" id="related-heading">Related stories</h2>
+          <div
+            class="transcript-panel__scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Transcript — scroll to read. Use arrow keys to navigate."
+          >
 
-            <a href="story-1.html" class="related__item" aria-label="Listen to: Morning market — voices of Kigali, audio, 18 minutes">
-              <div class="related__thumb" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
-              </div>
-              <div>
-                <p class="related__title">Morning market — voices of Kigali</p>
-                <p class="related__meta">Audio &nbsp;·&nbsp; 18 min &nbsp;·&nbsp; Community</p>
-              </div>
-            </a>
+            <div class="transcript-panel__entry">
+              <span class="transcript-panel__timestamp">00:00 - 01:15</span>
+              <p>
+                Nature has a way of speaking to those who listen. In the Echo Valley,
+                the wind does not just blow — it resonates through the narrow rock faces,
+                creating a low-frequency hum that locals call the Earth Song.
+              </p>
+            </div>
 
-            <a href="story-1.html" class="related__item" aria-label="Watch: Letters never sent, video, 11 minutes">
-              <div class="related__thumb" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-              </div>
-              <div>
-                <p class="related__title">Letters never sent</p>
-                <p class="related__meta">Video &nbsp;·&nbsp; 11 min &nbsp;·&nbsp; Personal</p>
-              </div>
-            </a>
+            <div class="transcript-panel__entry transcript-panel__entry--active" aria-current="true">
+              <span class="transcript-panel__timestamp">01:16 - 02:45 (Playing)</span>
+              <p>
+                We first started noticing the changes in the harmonics around fifteen years ago.
+                It is not just the volume that is different — it is the pitch. The valley is
+                singing a new tune, and we need to understand why before the silence takes over.
+              </p>
+            </div>
 
-            <a href="story-1.html" class="related__item" aria-label="Listen to: Building the bridge oral history, audio, 32 minutes">
-              <div class="related__thumb" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
-              </div>
-              <div>
-                <p class="related__title">Building the bridge — oral history</p>
-                <p class="related__meta">Audio &nbsp;·&nbsp; 32 min &nbsp;·&nbsp; Documentary</p>
-              </div>
-            </a>
+            <div class="transcript-panel__entry">
+              <span class="transcript-panel__timestamp">02:46 - 04:30</span>
+              <p>
+                Researchers from the State University have set up acoustic monitors at three key
+                points — The Sentinel, The Whisper Cave, and the Great Basin. They are tracking
+                the correlation between temperature shifts and sound speed.
+              </p>
+            </div>
 
-          </nav>
-        </aside>
+            <div class="transcript-panel__entry">
+              <span class="transcript-panel__timestamp">04:31 - 06:10</span>
+              <p>
+                For the residents of Clear Creek, the valley is more than a geographic feature —
+                it is an ancestral record. Every echo tells a story of those who came before.
+                Preserving these echoes means preserving their identity.
+              </p>
+            </div>
 
-      </div>
+            <div class="transcript-panel__entry">
+              <span class="transcript-panel__timestamp">06:11 - 08:00</span>
+              <p>
+                My grandmother used to say you could tell the weather by listening to the valley.
+                On a clear morning, the echo would bounce three times off the western ridge. We
+                have not heard a three-bounce echo in six years.
+              </p>
+            </div>
+
+            <div class="transcript-panel__entry">
+              <span class="transcript-panel__timestamp">08:01 - 10:20</span>
+              <p>
+                The community has lived alongside these sounds for over two hundred years.
+                Each family carries knowledge passed down through generations — oral histories,
+                sound maps drawn on paper, and memory that no data set can replicate.
+              </p>
+            </div>
+
+            <div class="transcript-panel__entry">
+              <span class="transcript-panel__timestamp">10:21 - 12:45</span>
+              <p>
+                What we are documenting here is not just sound. It is an entire way of knowing
+                the land. If we lose the valley's voice, we lose the community's relationship
+                with its own home.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
     </div>
+
+    <!-- STORY PAGINATION -->
+    <nav class="story-pagination" aria-label="Story pagination">
+      <a href="story-1.html" class="pagination-link" aria-label="Previous story: The Weaver's Silence">
+        <div class="pagination-link__icon">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        </div>
+        <div>
+          <span class="pagination-link__sup">Previous Story</span>
+          <span class="pagination-link__label">The Weaver's Silence</span>
+        </div>
+      </a>
+      <a href="story-1.html" class="pagination-link pagination-link--next" aria-label="Next story: Coastal Rhythms">
+        <div>
+          <span class="pagination-link__sup">Next Story</span>
+          <span class="pagination-link__label">Coastal Rhythms</span>
+        </div>
+        <div class="pagination-link__icon">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+        </div>
+      </a>
+    </nav>
+
+    <!-- RELATED STORIES -->
+    <section class="related" aria-labelledby="related-heading">
+      <h2 class="related__heading" id="related-heading">Related Stories</h2>
+      <ul class="related__grid" role="list">
+
+        <li class="related-card">
+          <a href="story-1.html" class="card" style="display:flex;flex-direction:column;height:100%;text-decoration:none;" aria-label="Watch The Weaver's Silence — documentary, 8 minutes, captions available">
+            <div class="card__thumb" style="aspect-ratio:16/9;position:relative">
+              <img src="../assets/media/weavers-thumb.svg" alt="Traditional wooden loom with colorful threads in a sunlit workshop" width="400" height="225" loading="lazy" />
+              <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.5);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px" aria-hidden="true">08:20</span>
+            </div>
+            <div class="card__body">
+              <p class="card__category">Documentary</p>
+              <h3 class="card__title">The Weaver's Silence</h3>
+              <p class="card__desc">An exploration into the dying art of hand-weaving in the remote northern provinces.</p>
+              <div class="card__footer">
+                <span class="card__date">Nov 01, 2024</span>
+                <span class="material-symbols-outlined" aria-hidden="true" style="color:#006e2d;font-size:24px">play_circle</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="related-card">
+          <a href="story-1.html" class="card" style="display:flex;flex-direction:column;height:100%;text-decoration:none;" aria-label="Watch Coastal Rhythms — nature documentary, 15 minutes, captions available">
+            <div class="card__thumb" style="aspect-ratio:16/9;position:relative">
+              <img src="../assets/media/coastal-thumb.svg" alt="Rocky ocean cliffs at twilight with turquoise waves" width="400" height="225" loading="lazy" />
+              <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.5);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px" aria-hidden="true">15:10</span>
+            </div>
+            <div class="card__body">
+              <p class="card__category">Nature</p>
+              <h3 class="card__title">Coastal Rhythms</h3>
+              <p class="card__desc">How the tides dictate the social and economic heartbeat of island communities.</p>
+              <div class="card__footer">
+                <span class="card__date">Oct 28, 2024</span>
+                <span class="material-symbols-outlined" aria-hidden="true" style="color:#006e2d;font-size:24px">play_circle</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="related-card">
+          <a href="story-1.html" class="card" style="display:flex;flex-direction:column;height:100%;text-decoration:none;" aria-label="Listen to Listening to the Past — technology story, 10 minutes, transcript available">
+            <div class="card__thumb" style="aspect-ratio:16/9;position:relative">
+              <img src="../assets/media/archive-thumb.svg" alt="A parabolic microphone in a field of grass against a gray sky" width="400" height="225" loading="lazy" />
+              <span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.5);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px" aria-hidden="true">10:45</span>
+            </div>
+            <div class="card__body">
+              <p class="card__category">Technology</p>
+              <h3 class="card__title">Listening to the Past</h3>
+              <p class="card__desc">The tech behind recovering sound archives from degraded physical media.</p>
+              <div class="card__footer">
+                <span class="card__date">Sep 15, 2024</span>
+                <span class="material-symbols-outlined" aria-hidden="true" style="color:#006e2d;font-size:24px">play_circle</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="../index.html" class="footer__logo" aria-label="StoryCast homepage">
-            StoryCast
-          </a>
-          <p class="footer__tagline">Accessible audio and video storytelling for everyone.</p>
-        </div>
-        <nav aria-label="StoryCast footer links">
-          <h2 class="footer__col-heading">StoryCast</h2>
-          <ul class="footer__links" role="list">
-            <li><a href="../about.html" class="footer__link">About</a></li>
-            <li><a href="../about.html#a11y" class="footer__link">Accessibility statement</a></li>
-            <li><a href="../about.html#engage" class="footer__link">Submit a story</a></li>
+    <div class="footer__upper">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__logo" aria-label="StoryCast home">StoryCast</a>
+        <p class="footer__tagline">Curating profound human and environmental narratives through premium video and audio storytelling.</p>
+      </div>
+      <div class="footer__nav-grid">
+        <nav aria-label="Navigation footer links">
+          <p class="footer__nav-heading">Navigation</p>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="../index.html" class="footer__nav-link">Home</a></li>
+            <li><a href="../index.html#story-grid" class="footer__nav-link">Stories</a></li>
+            <li><a href="../about.html" class="footer__nav-link">About</a></li>
           </ul>
         </nav>
-        <nav aria-label="Browse stories footer links">
-          <h2 class="footer__col-heading">Browse</h2>
-          <ul class="footer__links" role="list">
-            <li><a href="../index.html#story-grid" class="footer__link">All stories</a></li>
-            <li><a href="../index.html#story-grid" class="footer__link">Audio</a></li>
-            <li><a href="../index.html#story-grid" class="footer__link">Video</a></li>
-          </ul>
-        </nav>
-        <nav aria-label="Accessibility footer links">
-          <h2 class="footer__col-heading">Access</h2>
-          <ul class="footer__links" role="list">
-            <li><a href="#transcripts" class="footer__link">Transcript</a></li>
-            <li><a href="../about.html#a11y" class="footer__link">WCAG statement</a></li>
+        <nav aria-label="Support footer links">
+          <p class="footer__nav-heading">Support</p>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="../about.html#a11y" class="footer__nav-link">Accessibility Policy</a></li>
+            <li><a href="../about.html" class="footer__nav-link">Privacy</a></li>
+            <li><a href="../about.html" class="footer__nav-link">Terms</a></li>
+            <li><a href="../about.html#contact" class="footer__nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2024 StoryCast. All rights reserved.</p>
-        <p class="footer__access-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-          All media includes accessible alternatives
-        </p>
-      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2024 StoryCast. Built for inclusion.</p>
     </div>
   </footer>
 

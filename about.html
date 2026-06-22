@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About StoryCast — our mission, accessibility commitment, and WCAG 2.1 AA compliance. Learn how we make every story accessible to every listener." />
+  <meta name="description" content="About StoryCast — our mission to make storytelling accessible to every ear and every eye. WCAG 2.1 AA compliant platform with 100% transcript coverage." />
   <title>About &amp; Accessibility — StoryCast</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -18,23 +19,8 @@
   <header class="site-header" role="banner">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html" class="nav__logo" aria-label="StoryCast — go to homepage">
-          <span class="nav__logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1zm0 19a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-            </svg>
-          </span>
-          StoryCast
-        </a>
 
-        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
+        <a href="index.html" class="nav__logo" aria-label="StoryCast home">StoryCast</a>
 
         <ul class="nav__links" id="nav-links" role="list">
           <li><a href="index.html" class="nav__link">Home</a></li>
@@ -43,318 +29,267 @@
         </ul>
 
         <div class="nav__actions">
-          <a href="#engage" class="btn btn--primary btn--sm">Submit a story</a>
+          <button class="nav__icon-btn" aria-label="Accessibility settings">
+            <span class="material-symbols-outlined" aria-hidden="true">accessibility_new</span>
+          </button>
+          <button class="nav__icon-btn" aria-label="Search stories">
+            <span class="material-symbols-outlined" aria-hidden="true">search</span>
+          </button>
+          <button class="nav__mobile-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+          </button>
         </div>
+
       </nav>
+    </div>
+    <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="index.html#story-grid" class="nav__link">Stories</a>
+      <a href="about.html" class="nav__link" aria-current="page">About</a>
     </div>
   </header>
 
   <!-- MAIN -->
   <main id="main-content" tabindex="-1">
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="about-hero-heading">
-      <div class="container">
-        <span class="hero__eyebrow">Our mission &amp; accessibility commitment</span>
-        <h1 class="hero__heading" id="about-hero-heading">Storytelling that leaves no one behind</h1>
-        <p class="hero__body">
-          StoryCast is an accessibility-first platform built on the belief that every story
-          deserves to be heard, and every person deserves access to it — regardless of ability,
-          device, or connection.
-        </p>
-      </div>
-    </section>
-
-    <!-- VALUE CARDS -->
-    <section aria-labelledby="values-heading">
-      <div class="container">
-        <h2 class="visually-hidden" id="values-heading">Our values</h2>
-        <div class="value-grid">
-
-          <article class="value-card">
-            <div class="value-card__icon value-card__icon--purple" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-            </div>
-            <h3 class="value-card__title">Built for access</h3>
-            <p class="value-card__desc">Every feature is designed with accessibility as the starting point, not an afterthought.</p>
-          </article>
-
-          <article class="value-card">
-            <div class="value-card__icon value-card__icon--teal" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h3 class="value-card__title">Global voices</h3>
-            <p class="value-card__desc">We amplify stories from communities that are rarely heard in mainstream media.</p>
-          </article>
-
-          <article class="value-card">
-            <div class="value-card__icon value-card__icon--coral" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3 class="value-card__title">Community-driven</h3>
-            <p class="value-card__desc">Content is submitted, curated, and supported by the communities it represents.</p>
-          </article>
-
-          <article class="value-card">
-            <div class="value-card__icon value-card__icon--amber" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3 class="value-card__title">WCAG AA compliant</h3>
-            <p class="value-card__desc">All content meets or exceeds WCAG 2.1 AA standards for digital accessibility.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSION -->
-    <section class="mission-section" aria-labelledby="mission-heading">
-      <div class="container">
-        <h2 class="mission-section__heading" id="mission-heading">Our mission</h2>
-        <p class="mission-section__body">
-          StoryCast was founded on a simple belief — that every story deserves to be heard,
-          and every listener deserves equal access to hear it. Too often, audio and video
-          content is published without transcripts or captions, excluding millions of people
-          who are deaf, hard of hearing, or simply prefer to read.
-        </p>
-
-        <blockquote cite="StoryCast founding statement, 2023" style="border-left:3px solid #534AB7;background:#F5F4F5;padding:1rem 1.25rem;border-radius:0 0.5rem 0.5rem 0;margin:1.5rem 0;">
-          <p style="font-style:italic;color:#5F5E5A;margin:0;">
-            "If your story can only be experienced one way, it isn't fully told."
+    <!-- MISSION HERO -->
+    <article class="about-hero" aria-labelledby="about-heading">
+      <div class="about-hero__inner">
+        <div class="about-hero__content">
+          <span class="about-hero__eyebrow">Our Mission</span>
+          <h1 class="about-hero__heading" id="about-heading">
+            Making storytelling accessible to every ear and every eye.
+          </h1>
+          <p class="about-hero__body">
+            At StoryCast, we believe narrative should not be limited by barriers.
+            Our platform is built to ensure everyone can experience the magic of
+            professional storytelling.
           </p>
-        </blockquote>
+        </div>
+        <div class="about-hero__image">
+          <img
+            src="assets/media/about-hero.jpg"
+            alt="A diverse group of people engaged in active listening and reading in a bright modern studio with green accents and natural lighting"
+            width="400"
+            height="400"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </article>
 
-        <p class="mission-section__body">
-          We are committed to changing that — one story at a time. Every piece of audio
-          content on StoryCast includes a full text transcript. Every video includes
-          synchronized captions. Every interface element works with a keyboard and a screen
-          reader. This is not optional, it is foundational.
+    <!-- BENTO GRID — WHY IT MATTERS + STANDARDS -->
+    <section class="about-bento" aria-labelledby="inclusion-heading" id="a11y">
+      <div class="about-bento__grid">
+
+        <!-- Why inclusion matters — wide card -->
+        <div class="bento-card bento-card--wide">
+          <h2 class="bento-card__heading" id="inclusion-heading">Why Inclusion Matters</h2>
+          <p class="bento-card__body">
+            Inclusive media is about dignity and the fundamental right to information.
+            By prioritizing accessibility, we expand the reach of our stories and
+            enrich our community.
+          </p>
+          <div class="bento-card__tags">
+            <span class="bento-card__tag">Inclusive Design</span>
+            <span class="bento-card__tag">Universal Access</span>
+            <span class="bento-card__tag">Empowerment</span>
+          </div>
+        </div>
+
+        <!-- Our standards — green card -->
+        <div class="bento-card bento-card--green">
+          <h2 class="bento-card__heading">Our Standards</h2>
+          <p class="bento-card__body">
+            StoryCast adheres to the highest industry standards for digital inclusion.
+          </p>
+          <ul class="bento-card__list" role="list">
+            <li class="bento-card__list-item">
+              <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+              WCAG 2.1 AA Compliant
+            </li>
+            <li class="bento-card__list-item">
+              <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+              100% Transcript Coverage
+            </li>
+            <li class="bento-card__list-item">
+              <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+              HD Video Captions
+            </li>
+          </ul>
+        </div>
+
+        <!-- Accessibility commitments — full-width card -->
+        <div class="bento-card bento-card--full">
+          <h2 class="bento-card__heading" style="color:#141b2b;text-align:center;margin-bottom:2rem">Accessibility Commitments</h2>
+          <div class="commitments__grid">
+
+            <div class="commitments__item">
+              <div class="commitments__icon">
+                <span class="material-symbols-outlined" aria-hidden="true">keyboard</span>
+              </div>
+              <h3 class="commitments__title">Keyboard Navigation</h3>
+              <p class="commitments__desc">Full control of the interface using only a keyboard, with clear focus indicators.</p>
+            </div>
+
+            <div class="commitments__item">
+              <div class="commitments__icon">
+                <span class="material-symbols-outlined" aria-hidden="true">record_voice_over</span>
+              </div>
+              <h3 class="commitments__title">Screen Reader Ready</h3>
+              <p class="commitments__desc">Optimized ARIA labels and semantic HTML for JAWS, NVDA, and VoiceOver.</p>
+            </div>
+
+            <div class="commitments__item">
+              <div class="commitments__icon">
+                <span class="material-symbols-outlined" aria-hidden="true">contrast</span>
+              </div>
+              <h3 class="commitments__title">High Contrast</h3>
+              <p class="commitments__desc">Strict adherence to contrast ratios for readability in all lighting conditions.</p>
+            </div>
+
+            <div class="commitments__item">
+              <div class="commitments__icon">
+                <span class="material-symbols-outlined" aria-hidden="true">text_increase</span>
+              </div>
+              <h3 class="commitments__title">Flexible Sizing</h3>
+              <p class="commitments__desc">Support for text magnification up to 200% without loss of functionality.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEEDBACK FORM + SIDEBAR -->
+    <div class="about-contact" id="contact">
+
+      <!-- Contact form -->
+      <section class="feedback-form" aria-labelledby="feedback-heading">
+        <h2 class="feedback-form__heading" id="feedback-heading">Accessibility Feedback</h2>
+        <p class="feedback-form__intro">
+          Encountering a barrier? Let us know. We are committed to continuous improvement.
         </p>
-      </div>
-    </section>
 
-    <!-- ACCESSIBILITY FEATURES -->
-    <section class="a11y-features" aria-labelledby="a11y-heading" id="a11y">
-      <div class="container">
-        <h2 class="a11y-features__heading" id="a11y-heading">Accessibility features</h2>
+        <div id="form-status" class="feedback-form__status" role="alert" aria-live="polite"></div>
 
-        <div class="a11y-features__grid">
+        <form class="feedback-form__fields" id="feedbackForm" novalidate aria-describedby="feedback-heading">
 
-          <div class="a11y-features__item">
-            <div class="a11y-features__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <div>
-              <h3 class="a11y-features__title">Full transcripts</h3>
-              <p class="a11y-features__desc">Every audio story includes a complete text transcript — readable inline or downloadable as a .txt file.</p>
-            </div>
+          <div class="feedback-form__field">
+            <label class="feedback-form__label" for="full-name">Full Name</label>
+            <input
+              class="feedback-form__input"
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+              autocomplete="name"
+              aria-required="true"
+            />
           </div>
 
-          <div class="a11y-features__item">
-            <div class="a11y-features__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
-            </div>
-            <div>
-              <h3 class="a11y-features__title">Closed captions</h3>
-              <p class="a11y-features__desc">All video stories include synchronized captions delivered via WebVTT <code>&lt;track&gt;</code> elements.</p>
-            </div>
+          <div class="feedback-form__field">
+            <label class="feedback-form__label" for="email">Email Address</label>
+            <input
+              class="feedback-form__input"
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
           </div>
 
-          <div class="a11y-features__item">
-            <div class="a11y-features__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01"/></svg>
-            </div>
-            <div>
-              <h3 class="a11y-features__title">Keyboard navigation</h3>
-              <p class="a11y-features__desc">The full site is usable without a mouse — tab order, skip links, arrow key controls, and focus management throughout.</p>
-            </div>
+          <div class="feedback-form__field">
+            <label class="feedback-form__label" for="message">Your Message</label>
+            <textarea
+              class="feedback-form__textarea"
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+            ></textarea>
           </div>
 
-          <div class="a11y-features__item">
-            <div class="a11y-features__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
-            </div>
-            <div>
-              <h3 class="a11y-features__title">Visible focus states</h3>
-              <p class="a11y-features__desc">Every interactive element has a clear, high-contrast focus ring — minimum 3px, visible in all themes.</p>
-            </div>
+          <div>
+            <button class="btn btn--primary" type="submit">Send Feedback</button>
           </div>
 
-          <div class="a11y-features__item">
-            <div class="a11y-features__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            </div>
-            <div>
-              <h3 class="a11y-features__title">Color contrast</h3>
-              <p class="a11y-features__desc">All text meets WCAG AA 4.5:1 ratio. Large text meets 3:1. Tested with axe DevTools and Colour Contrast Analyser.</p>
-            </div>
-          </div>
+        </form>
+      </section>
 
-          <div class="a11y-features__item">
-            <div class="a11y-features__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <div>
-              <h3 class="a11y-features__title">Semantic HTML</h3>
-              <p class="a11y-features__desc">Proper landmarks, ARIA roles, and heading hierarchy throughout every page for screen reader compatibility.</p>
-            </div>
-          </div>
+      <!-- Sidebar -->
+      <aside class="about-sidebar" aria-label="Contact information and policy details">
 
+        <div class="info-card">
+          <h2 class="info-card__heading">Contact Directly</h2>
+          <ul class="info-card__list" role="list">
+            <li class="info-card__item">
+              <div class="info-card__item-icon" aria-hidden="true">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <span class="info-card__item-sup">Email</span>
+                <a class="info-card__item-link" href="mailto:access@storycast.media">
+                  access@storycast.media
+                </a>
+              </div>
+            </li>
+            <li class="info-card__item">
+              <div class="info-card__item-icon" aria-hidden="true">
+                <span class="material-symbols-outlined">phone_callback</span>
+              </div>
+              <div>
+                <span class="info-card__item-sup">Support Line</span>
+                <span class="info-card__item-text">1-800-STORY-01</span>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- WCAG CHECKLIST -->
-    <section class="checklist" aria-labelledby="checklist-heading">
-      <div class="container">
-        <h2 class="checklist__heading" id="checklist-heading">WCAG 2.1 AA compliance checklist</h2>
-
-        <dl>
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Captions on all video content <small style="color:#888780">(WCAG 1.2.2)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Audio descriptions &amp; transcripts <small style="color:#888780">(WCAG 1.2.3)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Keyboard accessible — no mouse traps <small style="color:#888780">(WCAG 2.1.1)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Visible focus indicator <small style="color:#888780">(WCAG 2.4.7)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Contrast ratio 4.5:1 for normal text <small style="color:#888780">(WCAG 1.4.3)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Proper heading hierarchy h1→h2→h3 <small style="color:#888780">(WCAG 1.3.1)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Skip navigation link provided <small style="color:#888780">(WCAG 2.4.1)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-          <div class="checklist__item">
-            <div class="checklist__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <dt class="checklist__label">Language of page declared <small style="color:#888780">(WCAG 3.1.1)</small></dt>
-            <dd><span class="checklist__status">Met</span></dd>
-          </div>
-
-        </dl>
-      </div>
-    </section>
-
-    <!-- HOW TO ENGAGE -->
-    <section class="engage-section" aria-labelledby="engage-heading" id="engage">
-      <div class="container">
-        <h2 class="engage-section__heading" id="engage-heading">How to engage with StoryCast</h2>
-        <p class="engage-section__intro">Three ways to be part of our community:</p>
-
-        <div class="engage-section__grid">
-          <article class="engage-section__card">
-            <div class="engage-section__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-            </div>
-            <h3 class="engage-section__title">Listen &amp; watch</h3>
-            <p class="engage-section__desc">Browse stories by category, length, or format. Every story is fully accessible.</p>
-          </article>
-
-          <article class="engage-section__card">
-            <div class="engage-section__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            </div>
-            <h3 class="engage-section__title">Submit a story</h3>
-            <p class="engage-section__desc">Share your audio or video with the community. We help with transcription and captions.</p>
-          </article>
-
-          <article class="engage-section__card">
-            <div class="engage-section__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            </div>
-            <h3 class="engage-section__title">Spread the word</h3>
-            <p class="engage-section__desc">Share stories that moved you. Help us reach listeners who need accessible storytelling.</p>
-          </article>
+        <div class="info-card info-card--dashed">
+          <h2 class="info-card__heading">Policy Details</h2>
+          <p class="info-card__body">
+            Our full Accessibility Policy is reviewed quarterly. We welcome audits from
+            third-party accessibility organizations. Last Updated: Oct 2024.
+          </p>
         </div>
-      </div>
-    </section>
+
+      </aside>
+
+    </div>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="index.html" class="footer__logo" aria-label="StoryCast homepage">
-            StoryCast
-          </a>
-          <p class="footer__tagline">Accessible audio and video storytelling for everyone.</p>
-        </div>
-        <nav aria-label="StoryCast footer links">
-          <h2 class="footer__col-heading">StoryCast</h2>
-          <ul class="footer__links" role="list">
-            <li><a href="about.html" class="footer__link">About</a></li>
-            <li><a href="#a11y" class="footer__link">Accessibility statement</a></li>
-            <li><a href="#engage" class="footer__link">Submit a story</a></li>
+    <div class="footer__upper">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="StoryCast home">StoryCast</a>
+        <p class="footer__tagline">&copy; 2024 StoryCast. Built for inclusion.</p>
+      </div>
+      <div class="footer__nav-grid">
+        <nav aria-label="Resources footer links">
+          <p class="footer__nav-heading">Resources</p>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="about.html#a11y" class="footer__nav-link">Accessibility Policy</a></li>
+            <li><a href="about.html" class="footer__nav-link">Privacy</a></li>
           </ul>
         </nav>
-        <nav aria-label="Browse footer links">
-          <h2 class="footer__col-heading">Browse</h2>
-          <ul class="footer__links" role="list">
-            <li><a href="index.html#story-grid" class="footer__link">All stories</a></li>
-            <li><a href="index.html#story-grid" class="footer__link">Audio</a></li>
-            <li><a href="index.html#story-grid" class="footer__link">Video</a></li>
-          </ul>
-        </nav>
-        <nav aria-label="Access footer links">
-          <h2 class="footer__col-heading">Access</h2>
-          <ul class="footer__links" role="list">
-            <li><a href="#checklist-heading" class="footer__link">WCAG checklist</a></li>
-            <li><a href="story/story-1.html#transcripts" class="footer__link">Transcripts</a></li>
+        <nav aria-label="Support footer links">
+          <p class="footer__nav-heading">Support</p>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="about.html" class="footer__nav-link">Terms</a></li>
+            <li><a href="about.html#contact" class="footer__nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2024 StoryCast. All rights reserved.</p>
-        <p class="footer__access-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
-          All media includes accessible alternatives
-        </p>
-      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2024 StoryCast. Built for inclusion.</p>
     </div>
   </footer>
 
