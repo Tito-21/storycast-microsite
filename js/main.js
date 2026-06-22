@@ -155,7 +155,46 @@
         videoEl.play();
       });
     }
-  
+  // ----------------------------------------------------------------
+// 7. STORY VIDEO LINKS
+// ----------------------------------------------------------------
+
+var videos = {
+  "Echoes of the Valley": "assets/media/echoes-of-the-valley.mp4",
+  "The Weaver's Silence": "assets/media/the-weavers-silence.mp4",
+  "Coastal Rhythms": "assets/media/coastal-rhythms.mp4",
+  "Streets of Solidarity": "assets/media/streets-of-solidarity.mp4"
+};
+
+
+document.querySelectorAll(
+  '.card, .featured-card, .horizontal-card'
+).forEach(function(card){
+
+  card.addEventListener('click', function(e){
+
+    var title = card.querySelector(
+      '.card__title, .featured-card__title, .horizontal-card__title'
+    );
+
+
+    if(!title) return;
+
+
+    var video = videos[title.textContent.trim()];
+
+
+    if(video){
+
+      e.preventDefault();
+
+      window.location.href = video;
+
+    }
+
+  });
+
+});
     // ----------------------------------------------------------------
     // 7. REDUCED MOTION — honour user preference
     // ----------------------------------------------------------------

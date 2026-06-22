@@ -415,7 +415,45 @@
       <p class="footer__copy">&copy; 2024 StoryCast. Built for inclusion.</p>
     </div>
   </footer>
+  <script>
 
-  <script src="assets/js/main.js"></script>
+    const videos = {
+      "Echoes of the Valley": "assets/media/video/echoes-of-the-valley.mp4",
+      "The Weaver's Silence": "assets/media/video/the-weavers-silence.mp4",
+      "Coastal Rhythms": "assets/media/video/coastal-rhythms.mp4",
+      "Streets of Solidarity": "assets/media/video/streets-of-solidarity.mp4"
+    };
+    
+    
+    document.querySelectorAll("a").forEach(card => {
+    
+      card.addEventListener("click", function(e){
+    
+        const title = this.querySelector(
+          ".card__title, .featured-card__title, .horizontal-card__title"
+        );
+    
+    
+        if(!title) return;
+    
+    
+        const video = videos[title.textContent.trim()];
+    
+    
+        if(video){
+    
+          e.preventDefault();
+    
+    
+          window.location.href = video;
+    
+        }
+    
+      });
+    
+    });
+    
+    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
